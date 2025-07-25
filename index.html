@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tea Store</title>
+  <!-- Boxicons CDN for icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Google Fonts - clean sans serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Feather Icons CDN -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/global.css" />
+  <!-- Home CSS -->
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand" aria-label="Tea Store Home">
+        <img src="assets/images/logo.jpg" alt="Tea Leaf Logo" class="logo" />
+        <span>Tea Store</span>
+      </a>
+
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html"><i data-feather="home"></i> Home</a></li>
+        <li><a href="shop.html"><i data-feather="shopping-bag"></i> Shop</a></li>
+        <li><a href="about.html"><i class="custom-icon-leaf"></i> About Us</a></li>
+        <li><a href="contact.html"><i data-feather="mail"></i> Contact</a></li>
+        <li><a href="cart.html" class="cart-link"><i data-feather="shopping-cart"></i> Cart <span class="cart-count" aria-live="polite">0</span></a></li>
+        <li><a href="login.html"><i data-feather="lock"></i> Login</a></li>
+      </ul>
+
+      <a href="shop.html" class="btn-shop-now">Get Tea</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Experience the Pure Essence of Tea</h1>
+      <p class="hero-subtitle">Handpicked organic teas from local farms, crafted to perfection.</p>
+      <a href="shop.html" class="btn-cta">Shop Now</a>
+    </div>
+  </section>
+  <!-- Featured Teas Section -->
+<section class="featured-teas" id="featured-teas">
+  <div class="container">
+    <h2 class="section-title">Featured Teas</h2>
+    <div class="teas-grid">
+      
+      <!-- Product Card 1 -->
+      <div class="tea-card">
+        <div class="badge badge-new">New</div>
+        <img src="assets/images/green-tea.jpg" alt="Organic Green Tea" />
+        <h3>Organic Green Tea</h3>
+        <p>Soothing and rich in antioxidants.</p>
+        <div class="tea-price">KSh 850</div>
+        <button class="btn-add-cart">Add to Cart</button>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="tea-card">
+        <div class="badge badge-bestseller">Bestseller</div>
+        <img src="assets/images/black-tea.jpg" alt="Classic Black Tea" />
+        <h3>Classic Black Tea</h3>
+        <p>Bold flavor with a smooth finish.</p>
+        <div class="tea-price">KSh 750</div>
+        <button class="btn-add-cart">Add to Cart</button>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="tea-card">
+        <div class="badge badge-limited">Limited Edition</div>
+        <img src="assets/images/herbal-tea.jpg" alt="Herbal Relax Tea" />
+        <h3>Herbal Relax Tea</h3>
+        <p>Perfect for winding down naturally.</p>
+        <div class="tea-price">KSh 950</div>
+        <button class="btn-add-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-company">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="assets/images/tea-farm.jpg" alt="Tea farm with morning sunlight" />
+    </div>
+    <div class="about-text">
+      <h2>Crafting the Perfect Cup Since 1998</h2>
+      <p>
+        We source our teas from sustainable farms to bring you pure, organic blends 
+        that nourish your body and mind. Our mission is to blend tradition and innovation 
+        in every cup you brew.
+      </p>
+      <a href="about.html" class="learn-more-btn">
+        Learn More <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-us">
+  <div class="section-divider"></div>
+  <h2 class="why-title">Why Tea Lovers Trust Us</h2>
+  <div class="benefits-container">
+    
+    <div class="benefit-card fade-in">
+      <img src="assets/icons/organic-leaf.png" alt="Organic Leaf Icon" />
+      <h3>100% Organic</h3>
+      <p>Our teas are grown without chemicals, ensuring pure, healthy blends every time.</p>
+    </div>
+
+    <div class="benefit-card fade-in">
+      <img src="assets/icons/locally-sourced.png" alt="Locally Sourced Icon" />
+      <h3>Locally Sourced</h3>
+      <p>We partner with small farms to bring you fresh, sustainable harvests.</p>
+    </div>
+
+    <div class="benefit-card fade-in">
+      <img src="assets/icons/fast-delivery.png" alt="Fast Shipping Icon" />
+      <h3>Fast Shipping</h3>
+      <p>Nationwide delivery within 2–3 days, so your tea arrives fresh and fast.</p>
+    </div>
+
+    <div class="benefit-card fade-in">
+      <img src="assets/icons/handcrafted.png" alt="Handcrafted Blends Icon" />
+      <h3>Handcrafted Blends</h3>
+      <p>Every batch is hand-mixed with care, tradition, and passion for quality.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="section-divider">&#127807;</div>
+  <h2 class="testimonials-title">What Our Customers Are Saying</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <i class='bx bxs-quote-left quote-icon'></i>
+      <p class="testimonial-text">“Absolutely love the calming green tea blend. I start every day with it!”</p>
+      <div class="testimonial-footer">
+        <i class='bx bxs-user-circle'></i>
+        <div>
+          <h4>Mary Njeri.</h4>
+          <span>Green Tea Lover</span>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in delay">
+      <i class='bx bxs-quote-left quote-icon'></i>
+      <p class="testimonial-text">“Fast delivery and the most aromatic teas I've ever had. Highly recommend!”</p>
+      <div class="testimonial-footer">
+        <i class='bx bxs-user-circle'></i>
+        <div>
+          <h4>James Nzomo.</h4>
+          <span>Herbal Enthusiast</span>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in delay2">
+      <i class='bx bxs-quote-left quote-icon'></i>
+      <p class="testimonial-text">“The quality of the leaves is unmatched. You can taste the care in every sip.”</p>
+      <div class="testimonial-footer">
+        <i class='bx bxs-user-circle'></i>
+        <div>
+          <h4>Faith Wafula.</h4>
+          <span>Tea Connoisseur</span>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-divider">&#127807;</div>
+</section>
+
+<!-- === FOOTER === -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><i class='bx bx-home'></i> <a href="index.html">Home</a></li>
+        <li><i class='bx bx-store'></i> <a href="shop.html">Shop</a></li>
+        <li><i class='bx bx-user'></i> <a href="about.html">About Us</a></li>
+        <li><i class='bx bx-envelope'></i> <a href="contact.html">Contact</a></li>
+        <li><i class='bx bx-cart'></i> <a href="cart.html">Cart</a></li>
+        <li><i class='bx bx-log-in'></i> <a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><i class='bx bx-phone'></i> +254 712 345678</p>
+      <p><i class='bx bx-envelope'></i> info@teabrand.com</p>
+      <p><i class='bx bx-map'></i> Thika Road, Nairobi</p>
+    </div>
+
+    <!-- Embedded Map -->
+    <div class="footer-column">
+      <h4>Our Location</h4>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.760145017253!2d36.8568778!3d-1.2534465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f170e90ef91f9%3A0x5cb6c7340937f6b5!2sKCA%20University!5e0!3m2!1sen!2ske!4v1700000000000" 
+        width="100%" 
+        height="150" 
+        style="border:0; border-radius: 8px;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="footer-social">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p>&copy; 2025 Tea Store. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="js/global.js"></script>
+<script src="js/home.js"></script>
+<script>
+  feather.replace();
+  // ... rest of inline JS
+</script>
+  
+</body>
+</html>

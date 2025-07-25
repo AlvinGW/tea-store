@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - Tea Store</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+<!-- Navbar (optional reuse from cart.html) -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="brand"><img src="assets/images/logo.jpg" alt="Tea Logo" class="logo" /> <span>Tea Store</span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html"><i data-feather="home"></i> Home</a></li>
+      <li><a href="shop.html"><i data-feather="shopping-bag"></i> Shop</a></li>
+      <li><a href="cart.html"><i data-feather="shopping-cart"></i> Cart</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="cart-header">
+  <div class="overlay">
+    <h1>Checkout</h1>
+    <p>Complete your order and enjoy premium tea!</p>
+  </div>
+</header>
+
+<section class="cart-container">
+  <form id="checkout-form">
+    <div class="checkout-grid">
+      <!-- Billing Section -->
+      <div class="billing-section">
+        <h2>Billing Information</h2>
+        <label>Full Name</label>
+        <input type="text" id="name" required />
+        <label>Email</label>
+        <input type="email" id="email" required />
+        <label>Phone Number</label>
+        <input type="tel" id="phone" required />
+        <label>Address</label>
+        <input type="text" id="address" required />
+
+        <h3>Payment Method</h3>
+        <select id="payment-method" required>
+          <option value="">Select</option>
+          <option value="mpesa">M-Pesa</option>
+          <option value="paypal">PayPal</option>
+          <option value="card">Credit/Debit Card</option>
+        </select>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="cart-summary">
+        <h2>Order Summary</h2>
+        <p><strong>Subtotal:</strong> <span id="checkout-subtotal">KES 0</span></p>
+        <p><strong>Shipping:</strong> Free over KES 2,000</p>
+        <p><strong>Total:</strong> <span id="checkout-total">KES 0</span></p>
+        <button type="submit" class="btn checkout">Place Order</button>
+        <div id="checkout-message" class="success-message hidden"></div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- === FOOTER === -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><i class='bx bx-home'></i> <a href="index.html">Home</a></li>
+        <li><i class='bx bx-store'></i> <a href="shop.html">Shop</a></li>
+        <li><i class='bx bx-user'></i> <a href="about.html">About Us</a></li>
+        <li><i class='bx bx-envelope'></i> <a href="contact.html">Contact</a></li>
+        <li><i class='bx bx-cart'></i> <a href="cart.html">Cart</a></li>
+        <li><i class='bx bx-log-in'></i> <a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><i class='bx bx-phone'></i> +254 712 345678</p>
+      <p><i class='bx bx-envelope'></i> info@teabrand.com</p>
+      <p><i class='bx bx-map'></i> Thika Road, Nairobi</p>
+    </div>
+
+    <!-- Embedded Map -->
+    <div class="footer-column">
+      <h4>Our Location</h4>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.760145017253!2d36.8568778!3d-1.2534465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f170e90ef91f9%3A0x5cb6c7340937f6b5!2sKCA%20University!5e0!3m2!1sen!2ske!4v1700000000000" 
+        width="100%" 
+        height="150" 
+        style="border:0; border-radius: 8px;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="footer-social">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p>&copy; 2025 Tea Store. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/global.js"></script>
+<script src="js/checkout.js"></script>
+<script>
+  feather.replace();
+</script>
+
+</body>
+</html>

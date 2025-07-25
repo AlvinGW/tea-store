@@ -1,0 +1,322 @@
+/* === SHOP HERO STYLES === */
+.shop-hero {
+  position: relative;
+  background-image: url('../assets/images/contact-hero.jpg'); /* Use your image */
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-hero-overlay {
+  background-color: rgba(1, 68, 33, 0.6); /* dark green overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.shop-hero-content {
+  text-align: center;
+  color: #fff;
+  animation: fadeInUp 1.2s ease forwards;
+  max-width: 700px;
+}
+
+.shop-hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.shop-hero-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: #ffeaea; /* soft pink */
+}
+
+.divider-icon {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #ffeaea;
+}
+
+/* Optional breadcrumb under header */
+.breadcrumb {
+  margin-top: -1rem;
+  padding: 0.5rem 2rem;
+  background: #f4f4f4;
+  font-size: 0.9rem;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .shop-hero {
+    height: 50vh;
+  }
+
+  .shop-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .shop-hero-content p {
+    font-size: 1rem;
+  }
+}
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+  --primary: #014421;
+  --light-cream: #fdfaf4;
+  --light-green: #f4fdf8;
+  --text-color: #333;
+  --accent: #ffb6c1; /* Optional accent (pinkish) */
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+/* === Section 1: Hero === */
+.contact-hero {
+  background: url('../assets/images/tea-hero.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.contact-hero .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  padding: 2rem;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* === Section 2: Contact Info === */
+.contact-info {
+  background: var(--light-cream);
+  padding: 4rem 1rem;
+}
+
+.contact-info .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info .left {
+  flex: 1 1 300px;
+}
+
+.contact-info .left h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.contact-info ul li i {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-right: 1rem;
+}
+
+.contact-info .right iframe {
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+}
+
+/* === Section 3: Contact Form === */
+.contact-form {
+  background: var(--light-green);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.contact-form h2 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-group i {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #022e2d;
+}
+
+#formStatus {
+  margin-top: 1rem;
+  color: green;
+}
+
+/* === Section 4: Social Media === */
+.contact-socials {
+  background: var(--light-cream);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.contact-socials h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.contact-socials p {
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: var(--primary);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--accent);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .contact-info .container {
+    flex-direction: column;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* === Animations === */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

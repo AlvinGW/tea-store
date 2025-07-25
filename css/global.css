@@ -1,0 +1,364 @@
+/* global.css */
+
+/* === Variables === */
+:root {
+  --color-primary: #1B3A2D;    /* dark green */
+  --color-secondary: #E69AB6;  /* pink accent */
+  --color-white: #ffffff;
+  --color-light: #f9f9f9;
+  --color-glow: rgba(230, 154, 182, 0.6);
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* === Global Reset & Base === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  background-color: var(--color-light);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/* === Navbar Styles === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--color-primary);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 999;
+  animation: slideFadeIn 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--color-white);
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.6rem;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.nav-menu li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+/* Icon sizing */
+.nav-menu li a i,
+.nav-menu li a svg {
+  stroke: var(--color-white);
+  width: 18px;
+  height: 18px;
+  transition: stroke 0.3s ease;
+}
+
+/* Hover underline grow */
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 8px var(--color-glow);
+}
+
+.nav-menu li a:hover::after,
+.nav-menu li a:focus::after {
+  width: 100%;
+}
+
+/* Hover glow and color change */
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  color: var(--color-secondary);
+  text-shadow: 0 0 8px var(--color-glow);
+}
+
+.nav-menu li a:hover i,
+.nav-menu li a:focus i,
+.nav-menu li a:hover svg,
+.nav-menu li a:focus svg {
+  stroke: var(--color-secondary);
+}
+
+/* Cart count badge */
+.cart-link {
+  position: relative;
+}
+
+.cart-count {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 12px;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 0 6px var(--color-glow);
+}
+
+/* CTA Button: Get Tea */
+.btn-shop-now {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 0 10px var(--color-glow);
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-shop-now:hover,
+.btn-shop-now:focus {
+  background-color: #d76e8a;
+  box-shadow: 0 0 14px #d76e8a;
+  color: var(--color-white);
+}
+
+/* Hamburger menu button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    height: calc(100vh - 60px);
+    background-color: var(--color-primary);
+    flex-direction: column;
+    gap: 1.4rem;
+    padding: 1.5rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide the CTA button on mobile for cleaner look */
+  .btn-shop-now {
+    display: none;
+  }
+}
+
+/* Hamburger active animation */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+.site-footer {
+  background-color: #014421;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column h4 {
+  color: #fdf6ee;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fdf6ee;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: pink;
+}
+
+.footer-links i,
+.footer-column p i {
+  color: pink;
+  margin-right: 8px;
+}
+
+.footer-column p {
+  margin: 10px 0;
+}
+
+.footer-social a {
+  font-size: 22px;
+  color: #fdf6ee;
+  margin-right: 12px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: pink;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.footer-bottom hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+}
+
+/* === Footer Animations === */
+.footer-column {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.footer-column.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Responsive Map Styling === */
+.footer-column iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Optional Sticky Footer on Mobile */
+@media (max-width: 768px) {
+  .sticky-mini-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #014421;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .sticky-mini-footer a {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .sticky-mini-footer a:hover {
+    color: pink;
+  }
+}

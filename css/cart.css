@@ -1,0 +1,252 @@
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fefcf8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.cart-header {
+  background: url('../assets/images/tea-farm.jpg') center/cover no-repeat;
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-header .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.cart-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin: 0;
+  animation: fadeIn 1s ease-out;
+}
+
+.cart-header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Cart Section */
+.cart-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.clear-cart-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px 100px 100px 40px;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: slideUp 0.5s ease forwards;
+}
+
+.cart-item img {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.item-details p {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 4px 0 0;
+}
+
+.item-price,
+.item-subtotal {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.item-qty input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Summary Section */
+.cart-summary {
+  margin-top: 3rem;
+  background: #f4f9f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 300px;
+  float: right;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.cart-summary h2 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.cart-summary p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+}
+
+.cart-summary span {
+  font-weight: bold;
+  float: right;
+}
+
+/* Action Buttons */
+.cart-actions {
+  clear: both;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cart-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  color: white;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.btn.continue {
+  background-color: #81c784;
+}
+
+.btn.continue:hover {
+  background-color: #333;
+}
+
+.btn.checkout {
+  background-color: red;
+}
+
+.btn.checkout:hover {
+  background-color: #1b5e20;
+}
+
+/* Empty Cart Message */
+#empty-message {
+  display: none;
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+#empty-message i {
+  font-size: 3rem;
+  color: #cfd8dc;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#empty-message a {
+  color: #388e3c;
+  text-decoration: underline;
+}
+
+/* Show when cart is empty */
+#empty-message.show {
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+  }
+
+  .item-price,
+  .item-qty,
+  .item-subtotal,
+  .remove-btn {
+    grid-column: span 2;
+  }
+
+  .cart-summary {
+    float: none;
+    margin: 2rem auto;
+  }
+
+  .cart-actions .btn {
+    width: 90%;
+    margin: 0.5rem 0;
+  }
+}

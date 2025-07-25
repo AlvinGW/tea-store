@@ -1,0 +1,230 @@
+/* === SHOP HERO STYLES === */
+.shop-hero {
+  position: relative;
+  background-image: url('../assets/images/about-hero.jpg'); /* Use your image */
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-hero-overlay {
+  background-color: rgba(1, 68, 33, 0.6); /* dark green overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.shop-hero-content {
+  text-align: center;
+  color: #fff;
+  animation: fadeInUp 1.2s ease forwards;
+  max-width: 700px;
+}
+
+.shop-hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.shop-hero-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: #ffeaea; /* soft pink */
+}
+
+.divider-icon {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #ffeaea;
+}
+
+/* Optional breadcrumb under header */
+.breadcrumb {
+  margin-top: -1rem;
+  padding: 0.5rem 2rem;
+  background: #f4f4f4;
+  font-size: 0.9rem;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .shop-hero {
+    height: 50vh;
+  }
+
+  .shop-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .shop-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Section basics */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  color: #014421;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* Hero */
+.hero-section {
+  background: url('../assets/images/tea-banner.jpg') center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  background-color: rgba(1, 68, 33, 0.7);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+}
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero-overlay p {
+  font-size: 1.2rem;
+  color: #f4a9b8;
+}
+
+/* Our Story */
+.our-story {
+  background: #fdfaf4;
+}
+.story-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.story-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.story-text {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Values */
+.our-values {
+  background: #fff;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+.value-card {
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+.value-card:hover {
+  background-color: #f4a9b8;
+  color: white;
+}
+.value-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #014421;
+}
+
+/* Process */
+.our-process {
+  background: #edf5ed;
+}
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  text-align: center;
+}
+.step {
+  flex: 1 1 200px;
+}
+.step i {
+  font-size: 2.5rem;
+  color: #014421;
+}
+.step h4 {
+  margin: 10px 0;
+  color: #014421;
+}
+
+/* Team */
+.team {
+  background: #fff0f5;
+}
+.team-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  color: #333;
+  margin-bottom: 40px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+.team-member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.team-member h4 {
+  margin: 5px 0;
+  color: #014421;
+}
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

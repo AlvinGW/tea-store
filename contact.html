@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tea Store</title>
+  <!-- Boxicons CDN for icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Google Fonts - clean sans serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Feather Icons CDN -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand" aria-label="Tea Store Home">
+        <img src="assets/images/logo.jpg" alt="Tea Leaf Logo" class="logo" />
+        <span>Tea Store</span>
+      </a>
+
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html"><i data-feather="home"></i> Home</a></li>
+        <li><a href="shop.html"><i data-feather="shopping-bag"></i> Shop</a></li>
+        <li><a href="about.html"><i class="custom-icon-leaf"></i> About Us</a></li>
+        <li><a href="contact.html"><i data-feather="mail"></i> Contact</a></li>
+        <li><a href="cart.html" class="cart-link"><i data-feather="shopping-cart"></i> Cart <span class="cart-count" aria-live="polite">0</span></a></li>
+        <li><a href="login.html"><i data-feather="lock"></i> Login</a></li>
+      </ul>
+
+      <a href="shop.html" class="btn-shop-now">Get Tea</a>
+    </div>
+  </nav>
+
+  <!-- === Contact HERO SECTION === -->
+<section class="shop-hero">
+  <div class="shop-hero-overlay">
+    <div class="shop-hero-content">
+      <h1>Let’s Talk Tea</h1>
+      <div class="divider-icon">🍃</div>
+      <p>We’d love to hear from you — reach out with questions, feedback, or just to say hi.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- 🟫 Section 2: Contact Details -->
+  <section class="contact-info">
+    <div class="container">
+      <div class="left">
+        <h2>Contact Information</h2>
+        <ul>
+          <li><i class='bx bx-map'></i> Thika Road, Nairobi</li>
+          <li><i class='bx bx-phone'></i> +254 712 345 678</li>
+          <li><i class='bx bx-envelope'></i> hello@teacompany.co.ke</li>
+          <li><i class='bx bx-time'></i> Mon–Sat, 8am – 6pm</li>
+        </ul>
+      </div>
+      <div class="right">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.009755168633!2d36.8568778!3d-1.2534465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17304850d5d7%3A0x7e3f0b946347b0e6!2sKCA%20University!5e0!3m2!1sen!2ske!4v1615802182520!5m2!1sen!2ske" 
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟨 Section 3: Contact Form -->
+  <section class="contact-form">
+    <h2>Send Us a Message</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <i class='bx bx-user'></i>
+        <input type="text" placeholder="Full Name" name="name" required />
+      </div>
+      <div class="form-group">
+        <i class='bx bx-envelope'></i>
+        <input type="email" placeholder="Email Address" name="email" required />
+      </div>
+      <div class="form-group">
+        <i class='bx bx-edit'></i>
+        <input type="text" placeholder="Subject" name="subject" required />
+      </div>
+      <div class="form-group">
+        <i class='bx bx-message'></i>
+        <textarea placeholder="Message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+      <p id="formStatus"></p>
+    </form>
+  </section>
+
+  <!-- 🟦 Section 4: Social Media -->
+  <section class="contact-socials">
+    <h2>Follow Us</h2>
+    <p>Join our community and explore more about our tea journey!</p>
+    <div class="social-icons">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+  </section>
+
+   <!-- === FOOTER === -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><i class='bx bx-home'></i> <a href="index.html">Home</a></li>
+        <li><i class='bx bx-store'></i> <a href="shop.html">Shop</a></li>
+        <li><i class='bx bx-user'></i> <a href="about.html">About Us</a></li>
+        <li><i class='bx bx-envelope'></i> <a href="contact.html">Contact</a></li>
+        <li><i class='bx bx-cart'></i> <a href="cart.html">Cart</a></li>
+        <li><i class='bx bx-log-in'></i> <a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><i class='bx bx-phone'></i> +254 712 345678</p>
+      <p><i class='bx bx-envelope'></i> info@teabrand.com</p>
+      <p><i class='bx bx-map'></i> Thika Road, Nairobi</p>
+    </div>
+
+    <!-- Embedded Map -->
+    <div class="footer-column">
+      <h4>Our Location</h4>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.760145017253!2d36.8568778!3d-1.2534465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f170e90ef91f9%3A0x5cb6c7340937f6b5!2sKCA%20University!5e0!3m2!1sen!2ske!4v1700000000000" 
+        width="100%" 
+        height="150" 
+        style="border:0; border-radius: 8px;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="footer-social">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p>&copy; 2025 Tea Store. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
